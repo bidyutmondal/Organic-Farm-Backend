@@ -7,14 +7,12 @@ const app = express();
 
 // app.use(express.static(publicDirectoryPath))
 
-const productsRouter = require("./routers/products")
-const usersRouter = require("./routers/users")
+const routes = require("./routers/routes")
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 // app.use(cookieParser())
-app.use(productsRouter)
-app.use(usersRouter)
+app.use(routes)
 
 const port = process.env.PORT || 8000;
 
