@@ -15,8 +15,7 @@ app.use(express.json());
 
 
 
-const uri =`mongodb+srv://karthik:iitkgp@cluster0.nuzkntz.mongodb.net/?retryWrites=true&w=majority`;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 
